@@ -1,4 +1,4 @@
-# Local Green Energy Forecast Visualization
+# Local Green Energy Forecast Visualisation
 
 This project leverages the National Grid ESO Carbon Intensity API to forecast energy fuel mix and carbon intensity measurements at the postcode level, half-hourly, for the next 48 hours. The project specifically focuses on low-income areas in the UK, which may be at risk of being left behind during the energy transition. The forecast includes a calculation of the combined wind and solar energy percentage.
 
