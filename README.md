@@ -41,7 +41,7 @@ To use this project, you’ll need to have Python installed on your machine alon
 
 ### 1. Generate Energy Forecast
 
-The script fetches energy data for specified postcodes and saves it in an Excel file with separate sheets for each postcode. The data includes the percentage contribution of various fuel sources, including nuclear, gas, biomass, wind, solar, and more.
+The script fetches forecasted half-hourly energy data for specified postcodes for the next 48 hours, and saves it in an Excel file with separate sheets for each postcode. The data includes the percentage contribution of various fuel sources, including nuclear, gas, biomass, wind, solar, and more.
 
 ### 2. Create Visualisation Tiles
 
@@ -52,7 +52,7 @@ The script generates two types of tiles:
 
 These tiles can be used to create dynamic visualisations, such as video loops or GIFs, to illustrate the energy forecast for specific areas.
 
-### 3. Customize and Extend
+### 3. Customise and Extend
 
 The code can be customized to include additional data points or to generate different types of visualizations. Contributions are welcome!
 
