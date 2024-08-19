@@ -1,13 +1,13 @@
 # Local Green Energy Forecast Visualization
 
-This project leverages the National Grid ESO Carbon Intensity API to forecast energy fuel mix and carbon intensity measurements at the postcode level, half-hourly, for the next 48 hours. The project specifically focuses on low-income areas in Manchester, UK, which may be at risk of being left behind during the energy transition. The forecast includes a calculation of the combined wind and solar energy percentage.
+This project leverages the National Grid ESO Carbon Intensity API to forecast energy fuel mix and carbon intensity measurements at the postcode level, half-hourly, for the next 48 hours. The project specifically focuses on low-income areas in the UK, which may be at risk of being left behind during the energy transition. The forecast includes a calculation of the combined wind and solar energy percentage.
 
 ## Features
 
 - **48-Hour Energy Forecast**: Retrieves data from the Carbon Intensity API for specific postcodes and generates an Excel file with half-hourly energy fuel mix forecasts.
-- **Tile Visualization**:
+- **Tile Visualisation**:
   - **Colored Tiles**: Visual representations of the combined wind and solar energy percentages, with shades of green and grey indicating renewable energy contributions.
-  - **Transparent Text Tiles**: Overlay-ready tiles displaying the location, wind and solar percentage, date, and time, suitable for video loops, GIFs, or other visualization applications.
+  - **Transparent Text Tiles**: Overlay-ready tiles displaying the location, wind and solar combined percentage, date, and time, suitable for charts, video loops, GIFs, or other visualisation applications.
 - **Social Impact**: Highlights energy disparities in low-income areas, providing a tool for raising awareness and advocating for equitable access to renewable energy.
 
 ## Installation
@@ -32,7 +32,7 @@ To use this project, you’ll need to have Python installed on your machine alon
    - `xlsxwriter`
 
 3. **Run the Code**:
-   Update the `postcode` and `postcodes` variables in the script to your desired locations and run the code to generate the energy forecast and visualization tiles.
+   Update the `postcode` and `postcodes` variables in the script to your desired locations and run the code to generate the energy forecast and visualisation tiles.
    ```bash
    python main.py
    ```
@@ -43,14 +43,14 @@ To use this project, you’ll need to have Python installed on your machine alon
 
 The script fetches energy data for specified postcodes and saves it in an Excel file with separate sheets for each postcode. The data includes the percentage contribution of various fuel sources, including nuclear, gas, biomass, wind, solar, and more.
 
-### 2. Create Visualization Tiles
+### 2. Create Visualisation Tiles
 
 The script generates two types of tiles:
 
 - **Colored Tiles**: Representing the combined wind and solar energy percentages.
 - **Transparent Text Tiles**: Featuring text overlays with location, wind and solar percentage, date, and time.
 
-These tiles can be used to create dynamic visualizations, such as video loops or GIFs, to illustrate the energy forecast for specific areas.
+These tiles can be used to create dynamic visualisations, such as video loops or GIFs, to illustrate the energy forecast for specific areas.
 
 ### 3. Customize and Extend
 
