@@ -5,7 +5,7 @@ This project leverages the National Grid ESO Carbon Intensity API to forecast en
 ## Features
 
 - **48-Hour Energy Forecast**: Retrieves data from the Carbon Intensity API for specific postcodes and generates an Excel file with half-hourly energy fuel mix forecasts.
-- **Tile Visualisation**:
+- **Tile Generation for Visualisation**:
   - **Colored Tiles**: Visual representations of the combined wind and solar energy percentages, with shades of green and grey indicating renewable energy contributions.
   - **Transparent Text Tiles**: Overlay-ready tiles displaying the location, wind and solar combined percentage, date, and time, suitable for charts, video loops, GIFs, or other visualisation applications.
 - **Social Impact**: Highlights energy disparities in low-income areas, providing a tool for raising awareness and advocating for equitable access to renewable energy.
