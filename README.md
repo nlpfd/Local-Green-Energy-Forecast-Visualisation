@@ -54,7 +54,7 @@ These tiles can be used to create dynamic visualisations, such as video loops or
 
 ### 3. Customise and Extend
 
-The code can be customized to include additional data points or to generate different types of visualizations. Contributions are welcome!
+The code can be customised to include additional data points or to generate different types of visualizations. Contributions are welcome!
 
 ## Contributing
 
