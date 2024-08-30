@@ -20,8 +20,17 @@ def create_text_tile(combined_renewable_perc, output_folder, timestamp):
     img = Image.new("RGBA", (640, 360), (255, 255, 255, 0))
     draw = ImageDraw.Draw(img)
 
+    # Making sure that fonts work on multiple platforms
+    try:
+        # For Windows
+        header_font = ImageFont.truetype("arial.ttf", 24)
+        timestamp_font = ImageFont.truetype("arial.ttf", 35)
+    except OSError:
+        # For Linux (ubuntu at least)
+        header_font = ImageFont.truetype("DejaVuSans.ttf", 24)
+        timestamp_font = ImageFont.truetype("DejaVuSans.ttf", 35)
+
     # Header Text
-    header_font = ImageFont.truetype("arial.ttf", 24)
     draw.text((10, 10), "Manchester: M9 Postcode", fill="black", font=header_font)
     draw.text(
         (10, 40),
@@ -36,7 +45,6 @@ def create_text_tile(combined_renewable_perc, output_folder, timestamp):
     )  # 40 for initial Y, 25 for space, 24 for the header text height
 
     # Date and Time Text
-    timestamp_font = ImageFont.truetype("arial.ttf", 35)
     date_time_text = timestamp.split("_")
     draw.text((10, y_position), date_time_text[0], fill="black", font=timestamp_font)
     draw.text(
