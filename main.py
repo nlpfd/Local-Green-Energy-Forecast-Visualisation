@@ -7,7 +7,12 @@ from PIL import Image, ImageDraw, ImageFont
 
 
 def fetch_combined_data(postcode):
-    current_datetime = datetime.utcnow()
+    try:
+        current_datetime = datetime.utcnow()
+    except:
+        # To support later versions of Python
+        current_datetime = datetime.now(datetime.UTC)
+
     fw48h_start = current_datetime.strftime("%Y-%m-%dT%H:%MZ")
     fw48h_url = f"https://api.carbonintensity.org.uk/regional/intensity/{fw48h_start}/fw48h/postcode/{postcode}"
     response = requests.get(fw48h_url)
@@ -16,7 +21,7 @@ def fetch_combined_data(postcode):
     return data["data"]["data"]
 
 
-def create_text_tile(combined_renewable_perc, output_folder, timestamp):
+def create_text_tile(combined_renewable_perc, output_folder, timestamp, postcode):
     img = Image.new("RGBA", (640, 360), (255, 255, 255, 0))
     draw = ImageDraw.Draw(img)
 
@@ -31,7 +36,7 @@ def create_text_tile(combined_renewable_perc, output_folder, timestamp):
         timestamp_font = ImageFont.truetype("DejaVuSans.ttf", 35)
 
     # Header Text
-    draw.text((10, 10), "Manchester: M9 Postcode", fill="black", font=header_font)
+    draw.text((10, 10), f"Postcode {postcode}", fill="black", font=header_font)
     draw.text(
         (10, 40),
         f"Wind & Solar: {combined_renewable_perc:.2f}%",
@@ -217,16 +222,15 @@ def generate_tiles(postcode, base_output_folder):
         )
 
         create_colored_tile(wind_perc, solar_perc, colored_folder, timestamp)
-        create_text_tile(combined_renewable_perc, transparent_folder, timestamp)
+        create_text_tile(
+            combined_renewable_perc, transparent_folder, timestamp, postcode
+        )
 
 
 if __name__ == "__main__":
     postcode = "M9"
     base_output_folder = "output/"
-    try:
-        os.mkdir(base_output_folder)
-    except:
-        pass  # Avoids crashing if the folder already exists
+    os.makedirs(base_output_folder, exist_ok=True)
     generate_tiles(postcode, base_output_folder)
 
     postcodes = ["M9", "M11", "M40", "M12", "M13", "M22", "M23"]
