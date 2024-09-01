@@ -16,20 +16,33 @@ To use this project, you’ll need to have Python installed on your machine alon
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/nlptfld/nlptfld-Local-Green-Energy-Forecast-Visualisation.git
-   cd nlptfld-Local-Green-Energy-Forecast-Visualisation
+   git clone https://github.com/nlpfd/Local-Green-Energy-Forecast-Visualisation.git green-energy-forecast
+   cd green-energy-forecast
    ```
 
 2. **Install dependencies**:
+
+   You should create a virtual environment (to avoid clashing with the rest of your Python installation) and then activate it.
+
+   - If you are running on Linux, then you could run:
+
+      ```bash
+      python -m venv venv
+      source venv/bin/activate
+      ```
+
+   - If you are running with an Anaconda distribution, you can do this with:
+      ```bash
+      conda create -n green-energy-forecast
+      conda activate green-energy-forecast
+      ```
+
+   Then, install the requirements in this environment:
+
    ```bash
    pip install -r requirements.txt
    ```
 
-   Ensure you have the following packages installed:
-   - `requests`
-   - `Pillow`
-   - `pandas`
-   - `xlsxwriter`
 
 3. **Run the Code**:
    Update the `postcode` and `postcodes` variables in the script to your desired locations and run the code to generate the energy forecast and visualisation tiles.
