@@ -1,10 +1,10 @@
 # Local Green Energy Forecast Visualisation
 
-This project leverages the National Grid ESO Carbon Intensity API to forecast energy fuel mix and carbon intensity measurements at the postcode level, half-hourly, for the next 48 hours. The project specifically focuses on low-income areas in the UK, which may be at risk of being left behind during the energy transition. The forecast includes a calculation of the combined wind and solar energy percentage.
+This project leverages the National Grid ESO Carbon Intensity API to forecast energy fuel mix and carbon intensity measurements using postcode searches, half-hourly, for the next 48 hours. The project specifically focuses on low-income areas in the UK, which may be at risk of being left behind during the energy transition. The forecast includes a calculation of the combined wind and solar energy percentage.
 
 ## Features
 
-- **48-Hour Energy Forecast**: Retrieves data from the Carbon Intensity API for specific postcodes and generates an Excel file with half-hourly energy fuel mix forecasts.
+- **48-Hour Energy Forecast**: Retrieves data from the Carbon Intensity API using postcode searches and generates an Excel file with half-hourly energy fuel mix forecasts.
 - **Tile Generation for Visualisation**:
   - **Colored Tiles**: Visual representations of the combined wind and solar energy percentages, with shades of green and grey indicating renewable energy contributions.
   - **Transparent Text Tiles**: Overlay-ready tiles displaying the location, wind and solar combined percentage, date, and time, suitable for charts, video loops, GIFs, or other visualisation applications.
@@ -54,7 +54,7 @@ To use this project, you’ll need to have Python installed on your machine alon
 
 ### 1. Generate Energy Forecast
 
-The script fetches forecasted half-hourly energy data for specified postcodes for the next 48 hours, and saves it in an Excel file with separate sheets for each postcode. The data includes the percentage contribution of various fuel sources, including nuclear, gas, biomass, wind, solar, and more.
+The script fetches forecasted half-hourly energy data for regions via postcode searches for the next 48 hours, and saves it in an Excel file with separate sheets for each postcode. The data includes the percentage contribution of various fuel sources, including nuclear, gas, biomass, wind, solar, and more.
 
 ### 2. Create Visualisation Tiles
 
@@ -67,7 +67,7 @@ These tiles can be used to create dynamic visualisations, such as video loops or
 
 ### 3. Customise and Extend
 
-The code can be customised to include additional data points or to generate different types of visualizations. Contributions are welcome!
+The code can be customised to include additional data points or to generate different types of visualisations. Contributions are welcome!
 
 ## Contributing
 
